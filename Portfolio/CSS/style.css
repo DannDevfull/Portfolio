@@ -1,12 +1,12 @@
 :root {
     /* Paleta de cores */
-    --bg-primary: #F5F0E8;
-    --bg-card: #E5DED2;
-    --text-primary: #343A36;
-    --text-muted: #58605B;
-    --accent-green: #A3B18A;
-    --accent-hover: #4F6D48;
-    --border-color: #343A36;
+    --bg-color: #F5F0E8;
+    --bg-cards: #E5DED2;
+    --text-color: #343A36;
+    --text-color-2: #58605B;
+    --light-green: #A3B18A;
+    --dark-hover: #4F6D48;
+    --border-gray-color: #343A36;
 
     /* Tipografia */
     --font-heading: "Sora", sans-serif;
@@ -15,6 +15,34 @@
     /* Transições */
     --transition-fast: 0.2s ease;
     --transition-smooth: 0.3s ease;
+
+    /* Cores para tema Dark */
+    --black: #141414;
+    --card-bg-color: #343A36;
+    --text-white:#E5DED2;
+
+    
+}
+
+.light-theme{
+    
+    --bg-primary:var(--bg-color);
+    --bg-card: var(--bg-cards);
+    --text-primary: var(--text-color);
+    --text-muted: var(--text-color-2);
+    --accent-green: var(--light-green);
+    --accent-hover: var(--dark-hover);
+    --border-color: var(--border-gray-color);
+    --btn-color:var(--text-white);
+    --btn-bg:var(--black);
+}
+
+.dark-theme{
+    --bg-primary:var(--black);
+    --bg-card:var(--card-bg-color);
+    --text-primary: var(--text-white);
+    --btn-color:var(--black);
+    --btn-bg:var(--text-white);
 }
 
 * {
@@ -75,6 +103,24 @@ header {
                 color: var(--accent-hover);
             }
         }
+    }
+
+    & .btn{
+        display: flex;
+        justify-content: center;
+        color: var(--btn-color);
+        background-color: var(--btn-bg);
+        border: 1px solid var(--btn-color);
+        width: 4%;
+        height: auto;
+        padding: 14px 22px;
+        border-radius: 50%;
+        transition: 0.5s ease;
+    }
+
+    & .btn:hover{
+        transform: translateY(-4px);
+        color: var(--light-green);
     }
 }
 
@@ -269,7 +315,7 @@ main {
                 gap: 14px;
                 padding: 16px 24px;
                 border: 1px solid var(--border-color);
-                background-color: transparent;
+                background-color: var(--bg-card);
                 border-radius: 12px;
                 transition: transform var(--transition-smooth), 
                             border-color var(--transition-smooth), 
