@@ -17,7 +17,7 @@
     --transition-smooth: 0.3s ease;
 
     /* Cores para tema Dark */
-    --black: #141414;
+    --black: #1a1a1a;
     --card-bg-color: #343A36;
     --text-white:#E5DED2;
 
@@ -62,6 +62,7 @@ body {
     background-color: var(--bg-primary);
     font-family: var(--font-heading);
     color: var(--text-primary);
+    transition: background-color 1s ease, color 1s ease;
 }
 
 /* Header */
@@ -105,7 +106,7 @@ header {
         }
     }
 
-    & .btn{
+    & .btn-theme{
         display: flex;
         justify-content: center;
         color: var(--btn-color);
@@ -114,11 +115,12 @@ header {
         width: 4%;
         height: auto;
         padding: 14px 22px;
-        border-radius: 50%;
-        transition: 0.5s ease;
+        border-radius: 14px;
+        cursor: pointer;
+        transition: 0.4s ease;
     }
 
-    & .btn:hover{
+    & .btn-theme:hover{
         transform: translateY(-4px);
         color: var(--light-green);
     }
