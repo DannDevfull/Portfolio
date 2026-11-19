@@ -1,25 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 :root {
     /* Paleta de cores */
-    --bg-color: #F5F0E8;
-    --bg-cards: #E5DED2;
-    --text-color: #343A36;
-    --text-color-2: #58605B;
-    --light-green: #A3B18A;
-    --dark-hover: #4F6D48;
+    --bg-color: #F2F0EA;
+    --bg-cards: #f2f2f2;
+    --text-color: #1B1E1B;
+    --text-color-min: #1B1E1B;
+    --light-green: #D75B37;
+    --dark-hover: #d75a37c7;
     --border-gray-color: #343A36;
 
     /* Tipografia */
-    --font-heading: "Sora", sans-serif;
-    --font-body: "Inter", sans-serif;
+    --font-heading: "sora", sans-serif;
+    --font-body: "DM Sans", sans-serif;
 
     /* Transições */
     --transition-fast: 0.2s ease;
     --transition-smooth: 0.3s ease;
 
     /* Cores para tema Dark */
-    --black: #1a1a1a;
+    --black: #1b1e1b;
     --card-bg-color: #343A36;
-    --text-white:#E5DED2;
+    --text-white:#f1f1f1;
+    --text-color-2: #707570;
+    
 
     
 }
@@ -29,6 +32,7 @@
     --bg-primary:var(--bg-color);
     --bg-card: var(--bg-cards);
     --text-primary: var(--text-color);
+    --text-color:var(--text-color-min);
     --text-muted: var(--text-color-2);
     --accent-green: var(--light-green);
     --accent-hover: var(--dark-hover);
@@ -43,6 +47,7 @@
     --text-primary: var(--text-white);
     --btn-color:var(--black);
     --btn-bg:var(--text-white);
+    --text-color: var(--text-color-2);
 }
 
 * {
@@ -76,8 +81,8 @@ header {
     align-items: center;
 
     & #p-nome {
-        font-size: 24px;
-        font-weight: 800;
+        font-size: 22px;
+        font-weight: 600;
         color: var(--text-primary);
         transition: color var(--transition-fast);
 
@@ -133,6 +138,12 @@ main {
         margin: auto;
     }
 
+    & .high{
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+
     /* Seção Home */
     & .home {
         display: flex;
@@ -150,24 +161,25 @@ main {
                 flex-direction: column;
 
                 & h1 {
-                    font-size: 40px;
-                    font-weight: 800;
+                    font-size: 58px;
+                    font-weight: 600;
                     letter-spacing: -0.5px;
                 }
 
                 & .line {
                     width: 100%;
-                    height: 2px;
+                    height: 1px;
                     background-color: var(--border-color);
-                    margin-top: 8px;
+                    margin-top: 4px;
                 }
             }
 
             & .function {
-                margin-top: 24px;
+                margin-top: 16px;
 
                 & h2 {
-                    font-size: 24px;
+                    font-size: 20px;
+                    font-family: var(--font-body);
                     font-weight: 600;
                     color: var(--text-muted);
                 }
@@ -182,9 +194,11 @@ main {
 
             & .parágrafo {
                 font-family: var(--font-body);
-                font-size: 17px;
+                font-size: 1.1rem;
+                text-align: justify;
                 line-height: 1.7;
-                color: var(--text-primary);
+                color: var(--text-color);
+
             }
 
             & .btn {
@@ -213,7 +227,6 @@ main {
                         border-color: var(--accent-hover);
                         color: #FFFFFF;
                         transform: translateY(-3px);
-                        box-shadow: 0 8px 18px rgba(79, 109, 72, 0.25);
                     }
 
                     &:active {
@@ -240,7 +253,6 @@ main {
                         background-color: var(--text-primary);
                         color: var(--bg-primary);
                         transform: translateY(-3px);
-                        box-shadow: 0 8px 18px rgba(52, 58, 54, 0.15);
                     }
 
                     &:active {
@@ -270,13 +282,16 @@ main {
         }
 
         & .p-2 {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            margin: auto;
+            text-align: justify;
             font-family: var(--font-body);
             font-size: 17px;
             line-height: 1.8;
             color: var(--text-primary);
             margin-top: 32px;
-            display: flex;
-            flex-direction: column;
             gap: 16px;
 
             & strong {
@@ -317,7 +332,6 @@ main {
                 gap: 14px;
                 padding: 16px 24px;
                 border: 1px solid var(--border-color);
-                background-color: var(--bg-card);
                 border-radius: 12px;
                 transition: transform var(--transition-smooth), 
                             border-color var(--transition-smooth), 
