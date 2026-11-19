@@ -18,7 +18,7 @@
     --transition-smooth: 0.3s ease;
 
     /* Cores para tema Dark */
-    --black: #1b1e1b;
+    --black: #111111;
     --card-bg-color: #343A36;
     --text-white:#f1f1f1;
     --text-color-2: #707570;
@@ -195,7 +195,7 @@ main {
             & .parágrafo {
                 font-family: var(--font-body);
                 font-size: 1.1rem;
-                text-align: justify;
+                text-align: left;
                 line-height: 1.7;
                 color: var(--text-color);
 
@@ -388,7 +388,6 @@ main {
                 flex-direction: row;
                 background-color: var(--bg-card);
                 border: 1px solid var(--border-color);
-                border-top: 4px solid var(--border-color);
                 border-radius: 10px;
                 overflow: hidden;
                 transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
