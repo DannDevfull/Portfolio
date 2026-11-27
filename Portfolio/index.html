@@ -27,13 +27,16 @@
                 
             <nav class="navBar">
                 <ul>
-                    <li><a href="#Sobre" class="info">Sobre mim</a></li>
-                    <li><a href="#Tech" class="info">Tecnologias</a></li>
-                    <li><a href="#Projs" class="info">Projetos</a></li>
-                    <li><a href="#Call" class="info">Contatos</a></li>
+                    <li><a href="#Sobre" class="info" data-i18n="nav.about">Sobre mim</a></li>
+                    <li><a href="#Tech" class="info" data-i18n="nav.tech">Tecnologias</a></li>
+                    <li><a href="#Projs" class="info" data-i18n="nav.projects">Projetos</a></li>
+                    <li><a href="#Call" class="info" data-i18n="nav.contact">Contatos</a></li>
                 </ul>
             </nav>
-            <button class="btn-theme"> <i class="fa-solid fa-moon"></i></button>
+            <div class="header-actions">
+                <button class="btn-theme" type="button" aria-label="Alternar tema" title="Alternar tema"><i class="fa-solid fa-moon"></i></button>
+                <button class="btn-lang" type="button" aria-label="Switch language to English" title="Switch to English"></i><span>EN</span></button>
+            </div>
         </header>
 
         <main>
@@ -44,18 +47,18 @@
                         <div class="line"></div>
                     </div>
                     <div class="function">
-                        <h2>Desenvolvedor Front-end</h2>
+                        <h2 data-i18n="home.role">Desenvolvedor Front-end</h2>
                     </div>
                 </div>
 
                 <div class="description">
-                    <p class="parágrafo">
+                    <p class="parágrafo" data-i18n-html="home.description">
                         Sou estudante de <span class="high">Desenvolvimento Web Front-End</span>, dedicado à criação de interfaces modernas, responsivas e intuitivas. Busco unir boas práticas de desenvolvimento, organização de código e atenção à experiência do usuário, enquanto aprimoro minhas habilidades por meio de projetos práticos e aprendizado contínuo.
                     </p>
 
                     <div class="btn">
-                        <a href="#Projs" class="btn-primary">Ver Projetos</a>
-                        <a href="PDFs/Danilo_Silva _Jaquer-Currículo.pdf" download="Danilo_Silva _Jaquer-Currículo.pdf" type="" class="btn-secondary">Baixar Currículo</a>
+                        <a href="#Projs" class="btn-primary" data-i18n="home.viewProjects">Ver Projetos</a>
+                        <a href="PDFs/Danilo_Silva _Jaquer-Currículo.pdf" download="Danilo_Silva _Jaquer-Currículo.pdf" type="" class="btn-secondary" data-i18n="home.downloadResume">Baixar Currículo</a>
                     </div>
                 </div>
             </section>
@@ -63,17 +66,17 @@
             <section class="about-section" id="Sobre">
                 <div class="Sobre">
                     <div class="lineSobre">
-                        <h2>Sobre mim</h2>
+                        <h2 data-i18n="about.title">Sobre mim</h2>
                         <div class="line"></div>
                     </div>
                     <div class="p-2">
-                        <p>
+                        <p data-i18n-html="about.p1">
                             Sou estudante de <span class="high">Desenvolvimento Web com foco em Front-End</span>, dedicado a transformar ideias em interfaces digitais funcionais, intuitivas e visualmente bem estruturadas.
                         </p>
-                        <p>
+                        <p data-i18n-html="about.p2">
                             Atualmente, aprofundo meus estudos em <span class="high">HTML, CSS e JavaScript</span>, além de utilizar Git e GitHub para versionamento e organização dos meus códigos. Meu objetivo constante é desenvolver soluções que conciliem design moderno, acessibilidade e responsividade.
                         </p>
-                        <p>
+                        <p data-i18n="about.p3">
                             Acredito que a evolução técnica acontece na prática e na resolução de problemas reais. Neste portfólio, compartilho alguns dos meus projetos e minha trajetória de evolução contínua.
                         </p>
                     </div>
@@ -82,7 +85,7 @@
 
             <section class="tech" id="Tech">
                 <div class="FerrTech">
-                    <h2>Ferramentas e tecnologias</h2>
+                    <h2 data-i18n="tech.title">Ferramentas e tecnologias</h2>
                     <div class="line"></div>
                 </div>
                 
@@ -123,7 +126,7 @@
 
             <section class="projects" id="Projs">
                 <div class="Projetos">
-                    <h2>Projetos</h2>
+                    <h2 data-i18n="projects.title">Projetos</h2>
                     <div class="line"></div>
                 </div>
 
@@ -132,19 +135,19 @@
                     <!-- Cards de Projetos -->
                     <div class="project-card">
                         <div class="project-thumb">
-                            <img src="img/Landingpage.png" alt="Prévia da Landing Page Brasa Burger">
+                            <img src="img/Landingpage.png" alt="Prévia da Landing Page Brasa Burger" data-i18n-alt="projects.p1.alt">
                         </div>
 
                         <div class="project-info">
-                            <h3>Landing Page Brasa Burger</h3>
-                            <p>
+                            <h3 data-i18n="projects.p1.title">Landing Page Brasa Burger</h3>
+                            <p data-i18n="projects.p1.desc">
                                 Projeto demonstrativo feito em HTML, CSS e JavaScript. Marca fictícia desenvolvida para fins de estudo e demonstração de habilidades em desenvolvimento front-end com design moderno e responsivo.
                             </p>
                             <div class="links">
-                                <a href="https://burgerfire-projetodemonstrativo.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://burgerfire-projetodemonstrativo.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="projects.live">
                                     Veja em tempo real
                                 </a>
-                                <a href="https://github.com/DannDevfull/BurgerFire-ProjetoDemonstrativo.git" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/DannDevfull/BurgerFire-ProjetoDemonstrativo.git" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">
                                     Veja o código
                                 </a>
                             </div>
@@ -153,19 +156,19 @@
 
                     <div class="project-card">
                         <div class="project-thumb">
-                            <img src="img/Pagedrink.png" alt="Prévia da Página PageDrinks">
+                            <img src="img/Pagedrink.png" alt="Prévia da Página PageDrinks" data-i18n-alt="projects.p2.alt">
                         </div>
                         
                         <div class="project-info">
                             <h3>PageDrinks</h3>
-                            <p>
+                            <p data-i18n="projects.p2.desc">
                                 Página interativa e dinâmica de bebidas, desenvolvida em HTML, CSS e JavaScript com layout fluido e foco na experiência visual do usuário.
                             </p>
                             <div class="links">
-                                <a href="https://pagedrink.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://pagedrink.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="projects.live">
                                     Veja em tempo real
                                 </a>
-                                <a href="https://github.com/DannDevfull/Projetos.git" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/DannDevfull/Projetos.git" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">
                                     Veja o código
                                 </a>
                             </div>
@@ -174,37 +177,37 @@
 
                      <div class="project-card">
                         <div class="project-thumb">
-                            <img src="img/MaisonAurele.png" alt="Prévia da Landing Page Brasa Burger">
+                            <img src="img/MaisonAurele.png" alt="Prévia da Landing Page Brasa Burger" data-i18n-alt="projects.p3.alt">
                         </div>
 
                         <div class="project-info">
                             <h3>Maison Aurèle</h3>
-                            <p>
+                            <p data-i18n="projects.p3.desc">
                                 Website demonstrativo feito em HTML, CSS e JavaScript de um restaurante. Essa é uma Marca fictícia desenvolvida para fins de estudo e demonstração de habilidades em desenvolvimento front-end.
                             </p>
                             <div class="links">
-                                <a href="https://maison-aurele-smoky.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://maison-aurele-smoky.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="projects.live">
                                     Veja em tempo real
                                 </a>
-                                <a href="https://github.com/DannDevfull/MaisonAurele.git" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/DannDevfull/MaisonAurele.git" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">
                                     Veja o código
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <p class="New"><strong>Novos Projetos em desenvolvimento</strong></p>
+                    <p class="New"><strong data-i18n="projects.more">Novos Projetos em desenvolvimento</strong></p>
                 </div>
             </section>
 
             <section class="contacts" id="Call">
                 <div class="linecontact">
-                    <h2>Contatos</h2>
+                    <h2 data-i18n="contact.title">Contatos</h2>
                     <div class="line"></div>
                 </div>
 
                 <div class="Contatos">
-                    <p class="invitation">
+                    <p class="invitation" data-i18n="contact.invitation">
                         Tem um projeto em mente? Me contate, estou disponível.
                     </p>
 
@@ -230,9 +233,9 @@
 
 
         <footer>
-            <p>&copy;<strong>2026 Danilo Silva. Todos os direitos reservados</strong></p>
+            <p>&copy;<strong data-i18n="footer.rights">2026 Danilo Silva. Todos os direitos reservados</strong></p>
             
-             <p class="back"><a href="#p-nome">Voltar ao topo</a></p>
+             <p class="back"><a href="#p-nome" data-i18n="footer.backToTop">Voltar ao topo</a></p>
             
         </footer>
 

@@ -111,21 +111,34 @@ header {
         }
     }
 
-    & .btn-theme{
+    & .header-actions {
         display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    & .btn-theme,
+    & .btn-lang {
+        display: flex;
+        align-items: center;
         justify-content: center;
+        gap: 8px;
         color: var(--btn-color);
         background-color: var(--btn-bg);
         border: 1px solid var(--btn-color);
-        width: 4%;
-        height: auto;
-        padding: 14px 22px;
+        height: 44px;
+        padding: 0 18px;
         border-radius: 14px;
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1;
         cursor: pointer;
         transition: 0.4s ease;
     }
 
-    & .btn-theme:hover{
+    & .btn-theme:hover,
+    & .btn-lang:hover {
         transform: translateY(-4px);
         color: var(--light-green);
     }
